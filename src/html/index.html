@@ -3,30 +3,157 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Evaluación final módulo 1 - Leire Ordeñana</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="icon" href="./assets/images/favicon.png" />
   </head>
 
   <body>
-    <div class="page">
-      <include src="./partials/header.html" title="Bienvenidos a Adalab"></include>
-      <include src="./partials/main.html"></include>
-      <include
-        src="./partials/link.html"
-        aClass="link__adalab"
-        text="Adalab"
-        url="https://adalab.es"
-      ></include>
-      <include
-        src="./partials/link.html"
-        aClass="link__github"
-        text="GitHub"
-        url="https://github.com"
-      ></include>
-      <include src="./partials/footer.html"></include>
-    </div>
-    <script src="./assets/js/main.js"></script>
+    <header class="header">
+      <nav>
+        <a
+          href="https://adalab.es/"
+          title="Go to the home page"
+          target="_blank"
+        >
+          <img
+            src="./assets/images/ico-menu.svg"
+            alt="Menú de hamburguesa de la página"
+          />
+          <!-- img does not need title attribute because it gets inherited -->
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <!-- it can be placed in the header? -->
+        <div class="hero-container">
+          <h1>
+            <span>Anonymous</span>
+            <span>Proxy</span>
+          </h1>
+          <p>In hac habitasse platea dictumst.</p>
+          <a href="#reasons" title="Go to section 3 reasons to purchase">
+            <img
+              src="./assets/images/ico-scroll-down.svg"
+              alt="Flecha naranja señalando hacia abajo"
+            />
+          </a>
+        </div>
+      </section>
+      <section class="tips">
+        <!-- do we need an article here? -->
+        <p>Insomnia Tips</p>
+        <h2>Looking Through A Window</h2>
+        <p>
+          Donec accumsan, nulla ut volutpat porttitor, quam odio tempus felis,
+          at luctus ex diam nec lectus. Vivamus semper sodales rutrum.
+        </p>
+        <button type="button">Go</button>
+      </section>
+      <section class="reasons" id="reasons">
+        <h2>3 Reasons To Purchase</h2>
+        <article>
+          <h3>Ut sed metus</h3>
+          <p>Lorem ipsum dolor sit amet, consecteur.</p>
+        </article>
+        <article>
+          <h3>Curabitur ac erat</h3>
+          <p>Mauris mattis urna quis lorem molestie.</p>
+        </article>
+        <article>
+          <h3>Morbi dictum</h3>
+          <p>Aliquam in dolor et dolor tincidunt.</p>
+        </article>
+        <button type="button">More reasons</button>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="#" title="Go back to the top of the page">
+        <img
+          src="./assets/images/ico-arrow.svg"
+          alt="Flecha naranja señalando hacia arriba"
+        />
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="https://adalab.es/"
+              title="Go to articles page"
+              target="_blank"
+              >Articles</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://adalab.es/"
+              title="Go to books page"
+              target="_blank"
+              >Books</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://adalab.es/"
+              title="Go to events page"
+              target="_blank"
+              >Events</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://adalab.es/"
+              title="Go to reasons page"
+              target="_blank"
+              >Reasons</a
+            >
+          </li>
+          <li>
+            <a href="https://adalab.es/" title="Go to tips page" target="_blank"
+              >Tips</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="https://adalab.es/"
+              title="Visit our Twitter"
+              target="_blank"
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://adalab.es/"
+              title="Visit our Instagram"
+              target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://adalab.es/"
+              title="Visit our Mastodon"
+              target="_blank"
+              >Mastodon.social</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <!-- copyright -->
+        <p><small>&#64;2017</small></p>
+        <!-- claim -->
+        <p><small>We love components</small></p>
+      </div>
+    </footer>
   </body>
 </html>
