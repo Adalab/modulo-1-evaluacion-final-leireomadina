@@ -1,4 +1,4 @@
-.hero-container {
+.hero {
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 25%, $color-dark), url(../images/cover.jpg);
   //creates more contrast in order to improve the visibility of the title and subtitle
@@ -6,11 +6,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.hero-wrapper {
+  margin: 0 15px;
   //flex display to center the title and text horizontally and push it to the bottom of the hero
+  height: 100vh;
   display: flex; 
   flex-direction: column;
   justify-content: flex-end; 
   align-items: center;
+
+  @media all and (min-width: 768px) {
+    margin: 0 39px;
+  }
+
+  @media all and (min-width: 1200px) {
+    margin: 0 auto;
+  }
 }
 
 .hero__title {
@@ -20,6 +33,17 @@
   font-weight: bold;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
   line-height: 1.31;
+  color: $color-light;
+  margin-bottom: 10px;
+
+  @media all and (min-width: 768px) {
+    font-size: 80px;
+    margin-bottom: 20px;
+  }
+
+  @media all and (min-width: 1200px) {
+    font-size: 6.25rem;
+  }
 }
 
 .hero__title--inner {
@@ -27,11 +51,37 @@
   text-align: center;
 }
 
-.hero__title, 
-.hero__subtitle {
-  color: $color-light;
-}
-
 .hero__subtitle {
   font-size: 1rem;
+  color: $color-light;
+  margin-bottom: 45px;
+
+  @media all and (min-width: 768px) {
+    font-size:  1.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+.hero__link {
+  width: 45px;
+  height: 45px;
+  background-color: $color-light;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 53px;
+
+  @media all and (min-width: 768px) {
+    margin-bottom: 45px;
+  }
+
+  @media all and (min-width: 1200px) {
+    margin-bottom: 13px;
+  }
+}
+
+.hero__image {
+  object-fit: contain;
+  //necesario?
 }
