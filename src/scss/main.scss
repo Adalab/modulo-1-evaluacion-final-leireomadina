@@ -1,6 +1,6 @@
 @import "core/variables";
 @import 'core/reset';
-// @import "layout/page";
+@import "layout/page";
 @import "layout/header";
 @import "layout/main";
 @import "layout/main-hero";
@@ -18,9 +18,3 @@ body {
   font-size: 1rem;
 }
 
-// TO CHECK
-
-button {
-  width: 100px;
-  //random width to resolve flex problem: change it later
-}
