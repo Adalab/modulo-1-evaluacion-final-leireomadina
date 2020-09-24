@@ -1,0 +1,22 @@
+
+.hero-container {
+  height: 100vh;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero__title {
+  color: white;
+  font-family:'Roboto Slab', serif;
+}
+
+.hero__text {
+  color: white;
+}
+/* just so we can see them for the moment */

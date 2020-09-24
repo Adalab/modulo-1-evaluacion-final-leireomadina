@@ -1,0 +1,11 @@
+.tips {
+  background-color: palevioletred;
+}
+
+.tips-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // is it necessary the flex start?
+  /* need fix button width */
+}
