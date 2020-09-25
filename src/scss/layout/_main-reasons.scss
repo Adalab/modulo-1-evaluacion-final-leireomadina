@@ -56,11 +56,14 @@
   height: 45px;
   border-radius: 22.5px;
   background-color: $color-brand-cta;
-  border: none;
+  // border: none;
+  border: 2px solid $color-brand-cta;
+  cursor: pointer;
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 2.25;
   color: $color-light;
+  transition: background-color ease-out 0.3s, color ease 0.3s, border ease-out 0.3s;
 
   @media all and (min-width: 768px) {
     width: 210px;
@@ -71,5 +74,10 @@
   }
 }
 
-//include HOVER effect on button
+.reasons__button:hover {
+  color: $color-brand-cta;
+  background-color: $color-light;
+  // background-color: lighten($color-brand-cta, 30%);
+  border: 2px solid $color-brand-cta;
+}
 
