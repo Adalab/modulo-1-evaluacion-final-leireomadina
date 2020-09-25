@@ -1,25 +1,32 @@
+//** Global styles for each article inside the reasons main section
+
+// Article block
 .reasons-article {
   color: $color-dark;
-}
 
-.reasons-article__title {
-  font-family: $font-title;
-  font-size: 1.125rem;
-  line-height: 1.67;
-  font-weight: bold;
-
-  @media all and (min-width: 768px) {
-    font-size: 1.5rem;
-    line-height: 1.25;
+  // Titles:
+  &__title {
+    font-family: $font-title;
+    font-size: 1.125rem;
+    line-height: 1.67;
+    font-weight: bold;
+    margin-bottom: 14px;
+  
+    @media all and (min-width: 768px) {
+      font-size: 1.5rem;
+      line-height: 1.25;
+    }
   }
-}
 
-.reasons-article__text {
-  font-size: 1.125rem;
-  line-height: 1.67;
-
-  @media all and (min-width: 768px) {
-    font-size: 1.25rem;
-    line-height: 1.5;
+  // Parapgraphs:
+  &__text {
+    font-size: 1.125rem;
+    line-height: 1.67;
+  
+    @media all and (min-width: 768px) {
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
   }
+
 }
