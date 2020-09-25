@@ -1,11 +1,35 @@
+//** Global styles for the reasons main section
+
+// Reasons block:
 .reasons {
   background-color: $color-brand-extra-light;
   //repeats padding in sections: template? in wrapper?
   padding: 30px 0 45px 0;
   text-align: center;
+
+  // Title:
+  &__title {
+    margin-bottom: 45px;
+    font-family: $font-title;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.25;
+    color: $color-dark; //can define it elsewhere
+  
+    @media all and (min-width: 768px) {
+      font-size: 1.625rem;
+      line-height: 1.73;
+    }
+  
+    @media all and (min-width: 1200px) {
+      font-size: 2rem;
+      line-height: 1.41;
+    }
+  }
 }
 
-.reasons-wrapper {
+//Special wrapper for this section, as desktop margins differ from main column styles
+.reasons__wrapper {
   margin: 0 15px;
 
   @media all and (min-width: 768px) {
@@ -17,36 +41,23 @@
   }
 }
 
-.reasons__title {
-  margin-bottom: 45px;
-  font-family: $font-title;
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1.25;
-  color: $color-dark; //can define it elsewhere
 
-  @media all and (min-width: 768px) {
-    font-size: 1.625rem;
-    line-height: 1.73;
-  }
-
-  @media all and (min-width: 1200px) {
-    font-size: 2rem;
-    line-height: 1.41;
-  }
-}
-
+// Grid container block:
 .grid-container {
   margin: 0 55px 45px 55px;
   display: grid;
+  //creates a set of 1 column and 3 rows for the articles, each one of them using equal available space
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  //defines the white space between rows
   row-gap: 45px;
 
   @media all and (min-width: 768px) {
     margin: 0 0 60px 0;
-    grid-template-columns: 1fr 1fr 1fr;
+    //creates a set of 3 columns and 1 rows for the articles (in tablet display, each one of them using equal available space
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+    //defines the white space between columns
     column-gap: 27.7px;
   }
 }
