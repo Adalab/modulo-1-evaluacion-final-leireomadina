@@ -1,48 +1,53 @@
+//** Global styles for the tips main section
+
+// Tips block
 .tips {
   background-color: $color-light;
-}
 
-.tips__tag {
-  color: $color-brand-light;
-  font-size: 0.875rem;
-  line-height: 2.14;
-  padding-top: 30px; //not margin in case the background-color changes
+  // Article tag:
+  &__tag {
+    color: $color-brand-light;
+    font-size: 0.875rem;
+    line-height: 2.14;
+    // use padding instead of margin in case we define another background-color 
+    padding-top: 30px; 
 
-  @media all and (min-width: 1200px) {
-    font-size: 1rem;
-    padding-top: 60px;
-  }
-}
-
-.tips__title {
-  font-family: $font-title;
-  font-size: 1.5rem;
-  line-height: 1.25;
-  color: $color-dark;
-  font-weight: bold;
-  margin-bottom: 15px;
-
-  @media all and (min-width: 768px) {
-    font-size:  1.625rem;
-    line-height: 1.73;
+    @media all and (min-width: 1200px) {
+      font-size: 1rem;
+      padding-top: 60px;
+    }
   }
 
-  @media all and (min-width: 1200px) {
-    font-size: 2rem;
-    line-height: 1.41;
+  // Title:
+  &__title {
+    font-family: $font-title;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    color: $color-dark;
+    font-weight: bold;
+    margin-bottom: 15px;
+  
+    @media all and (min-width: 768px) {
+      font-size:  1.625rem;
+      line-height: 1.73;
+    }
+
+    @media all and (min-width: 1200px) {
+      font-size: 2rem;
+      line-height: 1.41;
+    }
+  }
+  
+  // Paragraph:
+  &__text {
+    font-size: 1.125rem;
+    color: $color-text-light;
+    line-height: 1.67;
+    margin-bottom: 30px;
+  
+    @media all and (min-width: 768px) {
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
   }
 }
-
-.tips__text {
-  font-size: 1.125rem;
-  color: $color-text-light;
-  line-height: 1.67;
-  margin-bottom: 30px;
-
-  @media all and (min-width: 768px) {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-}
-
-

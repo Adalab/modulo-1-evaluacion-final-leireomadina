@@ -1,5 +1,6 @@
 @import "core/variables";
 @import 'core/reset';
+
 @import "layout/page";
 @import "layout/header";
 @import "layout/main";
@@ -8,7 +9,9 @@
 @import "layout/main-reasons";
 @import "layout/main-article";
 @import "layout/footer";
+
 @import "components/buttons";
+
 @import "pages/index";
 
 /*************** general styles ****************/

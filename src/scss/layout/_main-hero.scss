@@ -1,16 +1,21 @@
+//** Global styles for the hero section
+
+// Hero block:
 .hero {
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 25%, $color-dark), url(../images/cover.jpg);
-  /* creates more contrast in order to improve the visibility of the title and subtitle: linear gradient from top to bottom, starting with a gray color and turning black at the 25% end of the img height */
-  background-blend-mode: multiply; //increases the gradient effect
+  /* creates more contrast in order to improve the visibility of the page title and subtitle: linear gradient from top to bottom, starting with a gray color and turning black at the 25% end of the img height */
+  //increases the gradient effect
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
+  // Hero wrapper:
   &__wrapper {
     margin: 0 15px;
-    /* flex display to center the title and text horizontally and push it to the bottom of the hero */
     height: 100vh;
+    // flex display to center the title and text horizontally and push it to the bottom of the hero
     display: flex; 
     flex-direction: column;
     justify-content: flex-end; 
@@ -24,7 +29,8 @@
       margin: 0 auto;
     }
   }
-
+  
+  // Page title:
   &__title {
     font-family: $font-title;
     text-transform: uppercase;
@@ -44,12 +50,15 @@
       font-size: 6.25rem;
     }
 
+    // Title modifier (break line)
     &--inner {
-      display: block; //creates a break line
+      //creates a break line
+      display: block; 
       text-align: center;
     }
   }
 
+  // Page subtitle
   &__subtitle {
     font-size: 1rem;
     color: $color-light;
