@@ -1,65 +1,64 @@
 .hero {
   height: 100vh;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 25%, $color-dark), url(../images/cover.jpg);
-  //creates more contrast in order to improve the visibility of the title and subtitle
-  background-blend-mode: multiply; //increases the effect above
+  /* creates more contrast in order to improve the visibility of the title and subtitle: linear gradient from top to bottom, starting with a gray color and turning black at the 25% end of the img height */
+  background-blend-mode: multiply; //increases the gradient effect
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
 
-.hero-wrapper {
-  margin: 0 15px;
-  //flex display to center the title and text horizontally and push it to the bottom of the hero
-  height: 100vh;
-  display: flex; 
-  flex-direction: column;
-  justify-content: flex-end; 
-  align-items: center;
-
-  @media all and (min-width: 768px) {
-    margin: 0 39px;
+  &__wrapper {
+    margin: 0 15px;
+    /* flex display to center the title and text horizontally and push it to the bottom of the hero */
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
+  
+    @media all and (min-width: 768px) {
+      margin: 0 39px;
+    }
+  
+    @media all and (min-width: 1200px) {
+      margin: 0 auto;
+    }
   }
 
-  @media all and (min-width: 1200px) {
-    margin: 0 auto;
+  &__title {
+    font-family: $font-title;
+    text-transform: uppercase;
+    font-size: 2.625rem;
+    font-weight: bold;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    line-height: 1.31;
+    color: $color-light;
+    margin-bottom: 10px;
+
+    @media all and (min-width: 768px) {
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+  
+    @media all and (min-width: 1200px) {
+      font-size: 6.25rem;
+    }
+
+    &--inner {
+      display: block; //creates a break line
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    color: $color-light;
+    margin-bottom: 45px;
+  
+    @media all and (min-width: 768px) {
+      font-size:  1.5rem;
+      margin-bottom: 30px;
+    }
   }
 }
 
-//IMPLEMENT WRAPPER instead of above
-
-.hero__title {
-  font-family: $font-title;
-  text-transform: uppercase;
-  font-size: 2.625rem;
-  font-weight: bold;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-  line-height: 1.31;
-  color: $color-light;
-  margin-bottom: 10px;
-
-  @media all and (min-width: 768px) {
-    font-size: 80px;
-    margin-bottom: 20px;
-  }
-
-  @media all and (min-width: 1200px) {
-    font-size: 6.25rem;
-  }
-}
-
-.hero__title--inner {
-  display: block;
-  text-align: center;
-}
-
-.hero__subtitle {
-  font-size: 1rem;
-  color: $color-light;
-  margin-bottom: 45px;
-
-  @media all and (min-width: 768px) {
-    font-size:  1.5rem;
-    margin-bottom: 30px;
-  }
-}
