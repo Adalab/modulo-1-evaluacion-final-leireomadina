@@ -64,7 +64,7 @@
   }
 }
 
-.hero__link {
+.hero__button {
   width: 45px;
   height: 45px;
   background-color: $color-light;
@@ -73,6 +73,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 53px;
+  animation-name: updown;
+  animation-duration: 2s;
+  animation-iteration-count: 4;
+  animation-timing-function: ease;
 
   @media all and (min-width: 768px) {
     margin-bottom: 45px;
@@ -80,6 +84,19 @@
 
   @media all and (min-width: 1200px) {
     margin-bottom: 13px;
+  }
+}
+
+//button animation
+@keyframes updown {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 
