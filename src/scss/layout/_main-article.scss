@@ -1,0 +1,38 @@
+/* need to center the elements with grid as well */
+
+/*
+.reasons__article {
+  width: 60%;
+  border: 1px solid blue;
+}
+ */
+
+.reasons-article {
+  border: 1px solid blue;
+  color: $color-dark;
+  @media all and (min-width: 1200px) {
+    // margin: 0 auto;
+  }
+}
+
+.reasons-article__title {
+  font-family: $font-title;
+  font-size: 1.125rem;
+  line-height: 1.67;
+  font-weight: bold;
+
+  @media all and (min-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+.reasons-article__text {
+  font-size: 1.125rem;
+  line-height: 1.67;
+
+  @media all and (min-width: 768px) {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}

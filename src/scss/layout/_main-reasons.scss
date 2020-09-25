@@ -1,32 +1,45 @@
 .reasons {
-  background-color: orange;
+  background-color: $color-brand-extra-light;
+  padding-top: 30px; //repeats in sections: template? in wrapper?
+  text-align: center;
+}
+
+.reasons__title {
+  margin-bottom: 45px;
+  font-family: $font-title;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.25;
+  color: $color-dark; //can define it elsewhere
+
+  @media all and (min-width: 768px) {
+    font-size: 1.625rem;
+    line-height: 1.73;
+  }
+
+  @media all and (min-width: 1200px) {
+    font-size: 2rem;
+    line-height: 1.41;
+  }
 }
 
 .grid-container {
-  background-color: lightseagreen;
+  margin: 0 55px 45px 55px;
+  background-color: yellow;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 45px;
-}
 
-/* need to center the elements with grid as well */
-
-.reasons__article {
-  width: 60%;
-  border: 1px solid blue;
-}
-
-@media all and (min-width: 768px) {
-  .grid-container {
+  @media all and (min-width: 768px) {
+    margin: 0 0 60px 0;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     column-gap: 30px;
-    /* maybe we don't need to use the gap cause of centering */
   }
 
-  .reasons__article {
-    width: auto;
-    border: 1px solid blue;
+  @media all and (min-width: 1200px) {
+    // margin: 0 85px 60px 85px;
   }
+
 }
