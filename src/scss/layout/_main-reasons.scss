@@ -1,7 +1,20 @@
 .reasons {
   background-color: $color-brand-extra-light;
-  padding-top: 30px; //repeats in sections: template? in wrapper?
+  //repeats padding in sections: template? in wrapper?
+  padding: 30px 0 45px 0;
   text-align: center;
+}
+
+.reasons-wrapper {
+  margin: 0 15px;
+
+  @media all and (min-width: 768px) {
+    margin: 0 40px;
+  }
+
+  @media all and (min-width: 1200px) {
+    margin: 0 85px;
+  }
 }
 
 .reasons__title {
@@ -25,7 +38,6 @@
 
 .grid-container {
   margin: 0 55px 45px 55px;
-  background-color: yellow;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -35,11 +47,29 @@
     margin: 0 0 60px 0;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    column-gap: 30px;
+    column-gap: 27.7px;
+  }
+}
+
+.reasons__button {
+  width: 184px;
+  height: 45px;
+  border-radius: 22.5px;
+  background-color: $color-brand-cta;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2.25;
+  color: $color-light;
+
+  @media all and (min-width: 768px) {
+    width: 210px;
   }
 
   @media all and (min-width: 1200px) {
-    // margin: 0 85px 60px 85px;
+    width: 255px;
   }
-
 }
+
+//include HOVER effect on button
+
