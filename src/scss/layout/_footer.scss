@@ -17,50 +17,6 @@
   }
 }
 
-.footer-button {
-  width: 45px;
-  height: 45px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  background-color: $color-light;
-  border-radius: 50%;
-  // to center the arrow inside of the circle both horizontally and vertically
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: calc(-45px/2);
-  left: calc(50% - (45px/2));
-  // top: 0;
-  // transform: translate(0, -50%);
-  //remove transform translateY to position the button so we can transition with hover
-  animation-name: breath;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-out;
-  animation-delay: 1s;
-}
-
-//button animation
-@keyframes breath {
-  from {
-    transform: scale(1);
-    border: 1px solid $color-light;
-  }
-  70% {
-    border: 1px solid #304268;
-  }
-  to {
-    transform: scale(1.25);
-    border: 1px solid #304268;
-  }
-}
-
-.footer-button__image {
-  width: 20.6px;
-  height: 24px;
-  object-fit: contain;
-}
-
 .footer-flex-container {
   display: flex;
   flex-direction: column;

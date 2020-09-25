@@ -1,0 +1,147 @@
+//hero button
+
+.hero__button {
+  width: 45px;
+  height: 45px;
+  background-color: $color-light;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 53px;
+  animation-name: updown;
+  animation-duration: 2s;
+  animation-iteration-count: 4;
+  animation-timing-function: ease;
+
+  &__image {
+    object-fit: contain;
+  }
+  
+  @media all and (min-width: 768px) {
+    margin-bottom: 45px;
+  }
+
+  @media all and (min-width: 1200px) {
+    margin-bottom: 13px;
+  }
+}
+
+//tips button
+
+.tips__button {
+  margin-bottom: 45px;
+  width: 76px;
+  height: 45px;
+  border-radius: 22.5px;
+  border: solid 2px $color-brand-cta;
+  color: $color-brand-cta;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 2.25;
+  font-weight: 500;
+  background-color: $color-light;
+  transition: background-color ease-out 0.3s, color ease 0.3s;
+
+  &:hover {
+    color: $color-light;
+    background-color: $color-brand-cta;
+  }
+
+  @media all and (min-width: 768px) {
+    margin-bottom: 60px;
+    width: 91px;
+  }
+  @media all and (min-width: 1200px) {
+    width: 160px;
+  }
+}
+
+//reasons button
+
+.reasons__button {
+  width: 184px;
+  height: 45px;
+  border-radius: 22.5px;
+  background-color: $color-brand-cta;
+  border: 2px solid $color-brand-cta;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2.25;
+  color: $color-light;
+  transition: background-color ease-out 0.3s, color ease 0.3s, border ease-out 0.3s, transform ease-out 0.3s, letter-spacing ease 0.5s;
+
+  &:hover {
+    color: $color-brand-cta;
+    background-color: $color-light;
+    border: 2px solid $color-brand-cta;
+  }
+
+  @media all and (min-width: 768px) {
+    width: 210px;
+  }
+
+  @media all and (min-width: 1200px) {
+    width: 255px;
+  }
+}
+
+// footer button
+
+.footer-button {
+  width: 45px;
+  height: 45px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: $color-light;
+  border-radius: 50%;
+  // to center the arrow inside of the circle both horizontally and vertically
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(-45px/2);
+  left: calc(50% - (45px/2));
+  // top: 0;
+  // transform: translate(0, -50%);
+  //remove transform translateY to position the button so we can transition with hover
+  animation-name: breath;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+
+  &__image {
+    width: 20.6px;
+    height: 24px;
+    object-fit: contain;
+  }
+}
+
+//button animations
+
+@keyframes updown {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes breath {
+  from {
+    transform: scale(1);
+    border: 1px solid $color-light;
+  }
+  70% {
+    border: 1px solid #304268;
+  }
+  to {
+    transform: scale(1.25);
+    border: 1px solid #304268;
+  }
+}
