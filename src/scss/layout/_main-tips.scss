@@ -57,7 +57,7 @@
   line-height: 2.25;
   font-weight: 500;
   background-color: $color-light;
-  transition: background-color ease-out 0.3s, color ease 0.3s;
+  transition: background-color ease-out 0.3s, color ease 0.3s, transform ease 0.3s;
 
   @media all and (min-width: 768px) {
     margin-bottom: 60px;
@@ -71,4 +71,5 @@
 .tips__button:hover {
   color: $color-light;
   background-color: $color-brand-cta;
+  transform: translate(10px);
 }
