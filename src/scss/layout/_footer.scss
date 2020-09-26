@@ -1,47 +1,50 @@
 //** Global styles for the footer
 
+// Footer block:
 .footer {
   background-color: $color-brand-dark;
-  position: relative; //creates a new coordinate system for the arrow link
+  //creates a new coordinate system for the arrow link
+  position: relative;
+  
+  // Wrapper styles:
+  .footer__wrapper {
+    padding: 60px 0 45px 0;
+
+    @media all and (min-width: 768px) {
+      margin: 0 40px;
+      padding: 45px 0;
+    }
+
+    @media all and (min-width: 1200px) {
+      // margin: 0 370px;
+      margin: 0 auto;
+    }
+  }
+
+  // Flex container styles:
+  .footer__flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
+    @media all and (min-width: 768px) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    @media all and (min-width: 1200px) {
+      justify-content: center;
+    }
+  }
 }
 
-.footer__wrapper {
-  padding: 60px 0 45px 0;
 
-  @media all and (min-width: 768px) {
-    margin: 0 40px;
-    padding: 45px 0;
-  }
-
-  @media all and (min-width: 1200px) {
-    // margin: 0 370px;
-    margin: 0 auto;
-  }
-}
-
-.footer-flex-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  @media all and (min-width: 768px) {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  @media all and (min-width: 1200px) {
-    justify-content: center;
-  }
-}
-
+// Menu block:
 .footer-menu {
   margin-bottom: 30px;
-  &.social {
-    order: -1; //moving the social menu to the center of the footer
-  }
 
   @media all and (min-width: 768px) {
     margin-bottom: 0;
@@ -50,30 +53,42 @@
   @media all and (min-width: 1200px) {
     margin-left: 30px;
   }
+
+   // Social menu styles:
+   &--reordered {
+
+    @media all and (min-width: 768px) {
+      //moving the social menu to the center of the footer
+      order: -1; 
+    }
+  }
+
+  // Link styles:
+  &__link {
+    color: $color-light;
+    text-transform: uppercase;
+    font-size: 1rem;
+    //bigger clickable space for better UX
+    padding: 5px 25px;
+    line-height: 1.88;
+  }
+
 }
 
-.footer-menu__link {
-  color: $color-light;
-  text-transform: uppercase;
-  font-size: 1rem;
-  padding: 5px 25px;
-  line-height: 1.88;
-}
-
-/*
+// Copyright and claim block:
 .footer-copy {
 
-}
-*/
-
-.footer-copy__inner {
-  display: block;
-  color: $color-light;
-  line-height: 2.14;
-  font-size: 0.875rem;
-  text-transform: lowercase;
-}
-
-.footer-copy__inner--highlighted {
-  color: #f26002;
+  // Copyright and claim text styles:
+  &__inner {
+    display: block;
+    color: $color-light;
+    line-height: 2.14;
+    font-size: 0.875rem;
+    text-transform: lowercase;
+  
+    // Orange heart styles:
+    &--highlighted {
+      color: #f26002;
+    }
+  }
 }
