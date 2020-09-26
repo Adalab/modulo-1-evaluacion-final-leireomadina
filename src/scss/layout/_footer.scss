@@ -16,7 +16,6 @@
     }
 
     @media all and (min-width: 1200px) {
-      // margin: 0 370px;
       margin: 0 auto;
     }
   }
@@ -29,14 +28,11 @@
     text-align: center;
   
     @media all and (min-width: 768px) {
+      //so that the copy can be at the left side
       flex-direction: row-reverse;
-      justify-content: space-between;
+      justify-content: center;
       align-items: flex-start;
       text-align: left;
-    }
-  
-    @media all and (min-width: 1200px) {
-      justify-content: center;
     }
   }
 }
@@ -48,6 +44,7 @@
 
   @media all and (min-width: 768px) {
     margin-bottom: 0;
+    width: 210px;
   }
 
   @media all and (min-width: 1200px) {
@@ -77,6 +74,10 @@
 
 // Copyright and claim block:
 .footer-copy {
+
+  @media all and (min-width: 768px) {
+    width: 210px;
+  }
 
   // Copyright and claim text styles:
   &__inner {
