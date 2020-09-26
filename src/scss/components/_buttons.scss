@@ -12,7 +12,7 @@
   animation-duration: 2s;
   animation-iteration-count: 4;
   animation-timing-function: ease;
-  
+
   // Downwards arrow iamge:
   &__image {
     object-fit: contain;
@@ -29,8 +29,8 @@
 
 // Tips main section button:
 .tips-button {
- //include mixin to define rectangular rounded corner buttons with common styles:
- @include rectangularButton();
+  //include mixin to define rectangular rounded corner buttons with common styles:
+  @include rectangularButton();
   margin-bottom: 45px;
   width: 76px;
   border: solid 2px $color-brand-cta;
@@ -39,11 +39,21 @@
   //transition styles related to hover effect
   transition: background-color ease-out 0.3s, color ease 0.3s;
 
-  //hover effect for better UX
+  // Hover effect for better UX:
   &:hover {
     color: $color-light;
     background-color: $color-brand-cta;
   }
+
+  // Focus effect with high contrast to improve accessibility:
+  &:focus  {
+    color: $color-light;
+    background-color: $color-brand-cta;
+    /* removes default browser outline and add box-shadow to maintain rounded corners, since we cannot do that with the border property */
+    outline: none;
+    box-shadow: 0 0 0 3px $color-dark;
+  }
+
 
   @media all and (min-width: 768px) {
     margin-bottom: 60px;
@@ -66,11 +76,21 @@
   transition: background-color ease-out 0.3s, color ease 0.3s,
     border ease-out 0.3s;
 
-  //hover effect for better UX
+  // Hover effect to improve UX:
   &:hover {
     color: $color-brand-cta;
     background-color: $color-light;
     border: 2px solid $color-brand-cta;
+  }
+
+  // Focus effect with high contrast to improve accessibility:
+  &:focus  {
+    color: $color-brand-cta;
+    background-color: $color-light;
+    /* removes default browser outline and add box-shadow to maintain rounded corners, since we cannot do that with the border property */
+    outline: none;
+    box-shadow: 0 0 0 3px $color-dark;
+    border: none;
   }
 
   @media all and (min-width: 768px) {
@@ -109,7 +129,6 @@
     object-fit: contain;
   }
 }
-
 
 //** Button animations (inner navegation links)
 
