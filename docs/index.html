@@ -22,9 +22,12 @@
             alt="Hamburger menu of the page"
             class="header-menu__image"
           />
+          <!-- title attribute gets inherited from its container -->
         </a>
       </nav>
     </header>
+
+
 
     <main class="main">
       <section class="hero">
@@ -34,11 +37,11 @@
             <span class="hero__title--inner">Proxy</span>
           </h1>
           <p class="hero__subtitle">In hac habitasse platea dictumst.</p>
-          <a href="#reasons" title="Go to section 3 reasons to purchase" class="hero__button">
+          <a href="#reasons" title="Go to section 3 reasons to purchase" class="hero-button">
             <img
               src="./assets/images/ico-scroll-down.svg"
               alt="Flecha naranja señalando hacia abajo"
-              class="hero__image"
+              class="hero-button__image"
             />
           </a>
         </div>
@@ -52,11 +55,11 @@
             Donec accumsan, nulla ut volutpat porttitor, quam odio tempus felis,
             at luctus ex diam nec lectus. Vivamus semper sodales rutrum.
           </p>
-          <button type="button" class="tips__button" title="I want to know more">Go</button>
+          <button type="button" class="tips-button" title="I want to know more">Go</button>
         </div>
       </section>
       <section class="reasons" id="reasons">
-        <div class="reasons-wrapper"> 
+        <div class="reasons__wrapper"> 
           <h2 class="reasons__title">3 Reasons To Purchase</h2>
           <div class="grid-container">
             <article class="reasons-article">
@@ -72,21 +75,21 @@
               <p class="reasons-article__text">Aliquam in dolor et dolor tincidunt.</p>
             </article>
           </div>
-          <button type="button" class="reasons__button" title="Give me more reasons">More reasons</button>
+          <button type="button" class="reasons-button" title="Give me more reasons">More reasons</button>
         </div>
       </section>
 
     </main>
     <footer class="footer">
-      <div class="footer-wrapper">
+      <div class="footer__wrapper">
         <a href="#" title="Go back to the top of the page" class="footer-button">
           <img
             src="./assets/images/ico-arrow.svg"
             alt="Orange arrow pointing upwards"
-            class="footer-button_image"
+            class="footer-button__image"
           />
         </a>
-        <div class="footer-flex-container">
+        <div class="footer__flex-container">
           <nav class="footer-menu">
             <ul class="footer-menu__items">
               <li class="footer-menu__item">
@@ -136,7 +139,7 @@
               </li>
             </ul>
           </nav>
-          <nav class="footer-menu social">
+          <nav class="footer-menu footer-menu--reordered">
             <ul class="footer-menu__items">
               <li class="footer-menu__item">
                 <a
