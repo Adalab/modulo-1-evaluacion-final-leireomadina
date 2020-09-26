@@ -1,6 +1,6 @@
-//** Button animations (inner navegation links)
+//** Global styles for the 4 page buttons
 
-// Hero animation:
+// Hero button animation:
 @keyframes updown {
   from {
     transform: translateY(0);
@@ -13,7 +13,7 @@
   }
 }
 
-// Footer animation:
+// Footer button animation:
 @keyframes breath {
   from {
     transform: scale(1);
@@ -28,9 +28,7 @@
   }
 }
 
-//** Global styles for the 4 page buttons
-
-// Hero main section circular button (inner navigation link):
+// Hero section circular button (inner navigation link):
 .hero-button {
   //include mixin to define circular buttons with common styles
   @include circularButton();
@@ -43,15 +41,13 @@
   animation-iteration-count: 4;
   animation-timing-function: ease;
 
-  // Downwards arrow iamge:
+  // Downwards arrow image:
   &__image {
     object-fit: contain;
   }
-
   @media all and (min-width: 768px) {
     margin-bottom: 45px;
   }
-
   @media all and (min-width: 1200px) {
     margin-bottom: 13px;
   }
@@ -68,6 +64,13 @@
   background-color: $color-light;
   //transition styles related to hover effect
   transition: background-color ease-out 0.3s, color ease 0.3s;
+  @media all and (min-width: 768px) {
+    margin-bottom: 60px;
+    width: 91px;
+  }
+  @media all and (min-width: 1200px) {
+    width: 160px;
+  }
 
   // Hover effect for better UX:
   &:hover {
@@ -76,25 +79,16 @@
   }
 
   // Focus effect with high contrast to improve accessibility:
-  &:focus  {
+  &:focus {
     color: $color-light;
     background-color: $color-brand-cta;
     /* removes default browser outline and add box-shadow to maintain rounded corners, since we cannot do that with the border property */
     outline: none;
     box-shadow: 0 0 0 3px $color-dark;
   }
-
-
-  @media all and (min-width: 768px) {
-    margin-bottom: 60px;
-    width: 91px;
-  }
-  @media all and (min-width: 1200px) {
-    width: 160px;
-  }
 }
 
-// Reasons main section button:
+// Reasons section button:
 .reasons-button {
   //include mixin to define rectangular rounded corner buttons with common styles:
   @include rectangularButton();
@@ -105,6 +99,12 @@
   //transition styles related to hover effect
   transition: background-color ease-out 0.3s, color ease 0.3s,
     border ease-out 0.3s;
+  @media all and (min-width: 768px) {
+    width: 210px;
+  }
+  @media all and (min-width: 1200px) {
+    width: 255px;
+  }
 
   // Hover effect to improve UX:
   &:hover {
@@ -114,7 +114,7 @@
   }
 
   // Focus effect with high contrast to improve accessibility:
-  &:focus  {
+  &:focus {
     color: $color-brand-cta;
     background-color: $color-light;
     /* removes default browser outline and add box-shadow to maintain rounded corners, since we cannot do that with the border property */
@@ -122,19 +122,11 @@
     box-shadow: 0 0 0 3px $color-dark;
     border: none;
   }
-
-  @media all and (min-width: 768px) {
-    width: 210px;
-  }
-
-  @media all and (min-width: 1200px) {
-    width: 255px;
-  }
 }
 
 // Footer circular button (inner navigation link):
 .footer-button {
-  //include mixin to define circular buttons with common styles:
+  //include mixin to define circular buttons with common styles
   @include circularButton();
   //include mixin to center the image both horizontally and vertically with flex
   @include flexCentered();
@@ -159,4 +151,3 @@
     object-fit: contain;
   }
 }
-
