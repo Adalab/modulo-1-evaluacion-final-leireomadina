@@ -1,0 +1,8 @@
+//** Mixins declarations: reusable code blocks
+
+// To center items both horizontally and vertically:
+@mixin flexCentered() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

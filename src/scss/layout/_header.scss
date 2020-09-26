@@ -1,29 +1,28 @@
 //** Global styles for the header
 
-// Menu:
+// Hamburger menu container and inner elements:
 .header-menu {
-  // fixed menu at the top left corner
+  // fixed menu at the top left corner of the viewport
   position: fixed; 
   top: 0;
   left: 0;
   width: 44px;
   height: 44px;
-  // flex display to center the img vertically
-  display: flex;
-  align-items: center;
+  //mixin to center the image both horizontally and vertically with flex
+  @include flexCentered();
   background-color: $color-brand-midtone;
 
-  // link:
+  // Menu link to Adalab homepage:
   &__link {
     //bigger clickable space for better UX
     padding: 10px; 
-    //centers the img horizontally
+    //centers the img horizontally within its container
     margin: 0 auto;
   }
 
-  // Hamburger image:
+  // 3 horizontal lines image:
   &__image {
-    //adjusting the img to its container
+    //adjusting the img to fit its container
     width: 100%; 
     display: block;
   }

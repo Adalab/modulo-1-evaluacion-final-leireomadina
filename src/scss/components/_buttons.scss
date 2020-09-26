@@ -1,14 +1,15 @@
-//hero button
+//** Global styles for the 4 page buttons
 
-.hero__button {
+// Hero main section button (inner navigation link):
+.hero-button {
+  margin-bottom: 53px;
   width: 45px;
   height: 45px;
   background-color: $color-light;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 53px;
+  //mixin to center the image both horizontally and vertically with flex
+  @include flexCentered();
+  // animation related styles
   animation-name: updown;
   animation-duration: 2s;
   animation-iteration-count: 4;
@@ -17,7 +18,7 @@
   &__image {
     object-fit: contain;
   }
-  
+
   @media all and (min-width: 768px) {
     margin-bottom: 45px;
   }
@@ -29,7 +30,7 @@
 
 //tips button
 
-.tips__button {
+.tips-button {
   margin-bottom: 45px;
   width: 76px;
   height: 45px;
@@ -41,8 +42,10 @@
   line-height: 2.25;
   font-weight: 500;
   background-color: $color-light;
+  //transition styles related to hover effect
   transition: background-color ease-out 0.3s, color ease 0.3s;
 
+  //hover effect for better UX
   &:hover {
     color: $color-light;
     background-color: $color-brand-cta;
@@ -57,9 +60,8 @@
   }
 }
 
-//reasons button
-
-.reasons__button {
+// Reasons main section button:
+.reasons-button {
   width: 184px;
   height: 45px;
   border-radius: 22.5px;
@@ -70,8 +72,11 @@
   font-weight: 500;
   line-height: 2.25;
   color: $color-light;
-  transition: background-color ease-out 0.3s, color ease 0.3s, border ease-out 0.3s, transform ease-out 0.3s, letter-spacing ease 0.5s;
+  //transition styles related to hover effect
+  transition: background-color ease-out 0.3s, color ease 0.3s,
+    border ease-out 0.3s, transform ease-out 0.3s, letter-spacing ease 0.5s;
 
+  //hover effect for better UX
   &:hover {
     color: $color-brand-cta;
     background-color: $color-light;
@@ -87,30 +92,26 @@
   }
 }
 
-// footer button
-
+// Footer button (inner navigation link):
 .footer-button {
   width: 45px;
   height: 45px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   background-color: $color-light;
   border-radius: 50%;
-  // to center the arrow inside of the circle both horizontally and vertically
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  //mixin to center the image both horizontally and vertically with flex
+  @include flexCentered();
   position: absolute;
-  top: calc(-45px/2);
-  left: calc(50% - (45px/2));
-  // top: 0;
-  // transform: translate(0, -50%);
-  //remove transform translateY to position the button so we can transition with hover
+  top: calc(-45px / 2);
+  left: calc(50% - (45px / 2));
+  // animation related styles
   animation-name: breath;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
   animation-delay: 1s;
 
+  // Arrow image:
   &__image {
     width: 20.6px;
     height: 24px;
@@ -118,8 +119,10 @@
   }
 }
 
-//button animations
 
+//** Button animations (inner navegation links)
+
+// Hero animation:
 @keyframes updown {
   from {
     transform: translateY(0);
@@ -132,6 +135,7 @@
   }
 }
 
+// Footer animation:
 @keyframes breath {
   from {
     transform: scale(1);
@@ -141,7 +145,7 @@
     border: 1px solid #304268;
   }
   to {
-    transform: scale(1.25);
+    transform: scale(1.2);
     border: 1px solid #304268;
   }
 }

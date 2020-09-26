@@ -1,6 +1,9 @@
+// Core
+@import "core/mixins";
 @import "core/variables";
 @import 'core/reset';
 
+// Layout
 @import "layout/page";
 @import "layout/header";
 @import "layout/main";
@@ -10,8 +13,10 @@
 @import "layout/main-article";
 @import "layout/footer";
 
+// Components
 @import "components/buttons";
 
+// Pages
 @import "pages/index";
 
 /*************** general styles ****************/

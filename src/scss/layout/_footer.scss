@@ -1,9 +1,11 @@
+//** Global styles for the footer
+
 .footer {
   background-color: $color-brand-dark;
   position: relative; //creates a new coordinate system for the arrow link
 }
 
-.footer-wrapper {
+.footer__wrapper {
   padding: 60px 0 45px 0;
 
   @media all and (min-width: 768px) {
