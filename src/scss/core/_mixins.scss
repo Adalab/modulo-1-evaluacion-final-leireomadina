@@ -1,6 +1,6 @@
-//** Mixins declarations: reusable code blocks
+//** Mixins declarations
 
-// To center items both horizontally and vertically:
+// To center items both horizontally and vertically with flex:
 @mixin flexCentered() {
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@
   background-color: $color-light;
 }
 
-// Rectangular rounded corner buttons with common styles:
+// Rectangular buttons with common styles:
 @mixin rectangularButton() {
   height: 45px;
   border-radius: 22.5px;

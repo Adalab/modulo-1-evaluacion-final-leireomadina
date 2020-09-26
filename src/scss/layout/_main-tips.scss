@@ -1,4 +1,4 @@
-//** Global styles for the tips main section
+//** Global styles for the tips section
 
 // Tips block
 .tips {
@@ -7,11 +7,9 @@
   // Wrapper:
   &__wrapper {
     margin: 0 15px;
-  
     @media all and (min-width: 768px) {
       margin: 0 39px;
     }
-  
     @media all and (min-width: 1200px) {
       margin: 0 275px;
     }
@@ -23,9 +21,7 @@
     font-size: 0.875rem;
     line-height: 2.14;
     text-transform: capitalize;
-    // use padding instead of margin in case we define another background-color 
     padding-top: 30px; 
-
     @media all and (min-width: 1200px) {
       font-size: 1rem;
       padding-top: 60px;
@@ -41,13 +37,10 @@
     font-weight: bold;
     margin-bottom: 15px;
     text-transform: capitalize;
-
-  
     @media all and (min-width: 768px) {
       font-size:  1.625rem;
       line-height: 1.73;
     }
-
     @media all and (min-width: 1200px) {
       font-size: 2rem;
       line-height: 1.41;
@@ -60,7 +53,6 @@
     color: $color-text-light;
     line-height: 1.67;
     margin-bottom: 30px;
-  
     @media all and (min-width: 768px) {
       font-size: 1.25rem;
       line-height: 1.5;

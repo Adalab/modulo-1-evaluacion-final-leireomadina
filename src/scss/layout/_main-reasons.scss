@@ -1,4 +1,4 @@
-//** Global styles for the reasons main section
+//** Global styles for the reasons section
 
 // Reasons block:
 .reasons {
@@ -9,11 +9,9 @@
   // Wrapper
   &__wrapper {
     margin: 0 15px;
-  
     @media all and (min-width: 768px) {
       margin: 0 40px;
-    }  
-
+    }
     @media all and (min-width: 1200px) {
       margin: 0 85px;
     }
@@ -28,12 +26,10 @@
     line-height: 1.25;
     color: $color-dark;
     text-transform: capitalize;
-  
     @media all and (min-width: 768px) {
       font-size: 1.625rem;
       line-height: 1.73;
     }
-  
     @media all and (min-width: 1200px) {
       font-size: 2rem;
       line-height: 1.41;
@@ -45,19 +41,13 @@
 .grid-container {
   margin: 0 55px 45px 55px;
   display: grid;
-  //creates a set of 1 column and 3 rows for the articles, each one of them using equal available space
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   row-gap: 45px;
-
   @media all and (min-width: 768px) {
     margin: 0 0 60px 0;
-    //creates a set of 3 columns and 1 rows for the articles (in tablet display, each one of them using equal available space
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     column-gap: 27.7px;
   }
 }
-
-
-

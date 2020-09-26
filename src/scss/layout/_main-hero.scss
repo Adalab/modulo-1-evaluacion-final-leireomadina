@@ -1,11 +1,16 @@
-//** Global styles for the hero main section
+//** Global styles for the hero section
 
 // Hero block:
 .hero {
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 25%, $color-dark), url(../images/cover.jpg);
-  /* creates more contrast in order to improve the visibility of the page title and subtitle: linear gradient from top to bottom, starting with a gray color and turning black at the 25% end of the img height */
-  //increases the gradient effect
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 25%,
+      $color-dark
+    ),
+    url(../images/cover.jpg);
+  /* creates more contrast in order to improve the visibility of the page title and subtitle: linear gradient from top to bottom, starting with a gray color and turning black at the 25% end of the image bottom height */
+  //blend mode increases the gradient effect
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,21 +21,19 @@
     margin: 0 15px;
     height: 100vh;
     // flex display to center the title and text horizontally and push it to the bottom of the hero
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
-  
     @media all and (min-width: 768px) {
       margin: 0 39px;
     }
-  
     @media all and (min-width: 1200px) {
       margin: 0 auto;
     }
   }
-  
-  // Page title:
+
+  // Page h1 title:
   &__title {
     font-family: $font-title;
     text-transform: uppercase;
@@ -40,34 +43,30 @@
     line-height: 1.31;
     color: $color-light;
     margin-bottom: 10px;
-
     @media all and (min-width: 768px) {
       font-size: 5rem;
       margin-bottom: 20px;
     }
-  
     @media all and (min-width: 1200px) {
       font-size: 6.25rem;
     }
 
-    // Title modifier: break line
+    // Title modifier:
     &--inner {
       //creates a break line
-      display: block; 
+      display: block;
       text-align: center;
     }
   }
 
-  // Page subtitle
+  // Page subtitle:
   &__subtitle {
     font-size: 1rem;
     color: $color-light;
     margin-bottom: 45px;
-  
     @media all and (min-width: 768px) {
-      font-size:  1.5rem;
+      font-size: 1.5rem;
       margin-bottom: 30px;
     }
   }
 }
-
