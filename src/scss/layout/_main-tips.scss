@@ -3,6 +3,19 @@
 // Tips block
 .tips {
   background-color: $color-light;
+  
+  // Wrapper:
+  &__wrapper {
+    margin: 0 15px;
+  
+    @media all and (min-width: 768px) {
+      margin: 0 39px;
+    }
+  
+    @media all and (min-width: 1200px) {
+      margin: 0 275px;
+    }
+  }
 
   // Article tag:
   &__tag {
@@ -18,7 +31,7 @@
     }
   }
 
-  // Title:
+  // Title styles:
   &__title {
     font-family: $font-title;
     font-size: 1.5rem;
@@ -38,7 +51,7 @@
     }
   }
   
-  // Paragraph:
+  // Paragraph styles:
   &__text {
     font-size: 1.125rem;
     color: $color-text-light;

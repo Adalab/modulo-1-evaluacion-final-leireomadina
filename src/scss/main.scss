@@ -4,9 +4,7 @@
 @import 'core/reset';
 
 // Layout
-@import "layout/page";
 @import "layout/header";
-@import "layout/main";
 @import "layout/main-hero";
 @import "layout/main-tips";
 @import "layout/main-reasons";
@@ -15,14 +13,5 @@
 
 // Components
 @import "components/buttons";
-
-// Pages
-@import "pages/index";
-
-/*************** general styles ****************/
-
-body {
-  font-family:'Roboto', sans-serif;
-  font-size: 1rem;
-}
+@import "components/typography";
 

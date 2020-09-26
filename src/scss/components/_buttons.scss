@@ -1,3 +1,33 @@
+//** Button animations (inner navegation links)
+
+// Hero animation:
+@keyframes updown {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+// Footer animation:
+@keyframes breath {
+  from {
+    transform: scale(1);
+    border: 1px solid $color-light;
+  }
+  70% {
+    border: 1px solid #304268;
+  }
+  to {
+    transform: scale(1.2);
+    border: 1px solid #304268;
+  }
+}
+
 //** Global styles for the 4 page buttons
 
 // Hero main section circular button (inner navigation link):
@@ -130,32 +160,3 @@
   }
 }
 
-//** Button animations (inner navegation links)
-
-// Hero animation:
-@keyframes updown {
-  from {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-// Footer animation:
-@keyframes breath {
-  from {
-    transform: scale(1);
-    border: 1px solid $color-light;
-  }
-  70% {
-    border: 1px solid #304268;
-  }
-  to {
-    transform: scale(1.2);
-    border: 1px solid #304268;
-  }
-}
