@@ -61,6 +61,12 @@
     //bigger clickable space for better UX
     padding: 5px 25px;
     line-height: 1.88;
+    transition: color 0.3s ease-out;
+
+    // Hover styles for better UX
+    &:hover {
+      color: $color-brand-cta;
+    }
   }
 }
 
