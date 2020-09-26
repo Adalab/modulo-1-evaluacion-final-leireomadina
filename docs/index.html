@@ -16,13 +16,13 @@
   <body>
     <header class="header">
       <nav class="header-menu">
-        <a href="https://adalab.es/" title="Go to Adalab home page" target="_blank" class="header-menu__link">
+        <a href="https://adalab.es/" title="Go to Adalab homepage" target="_blank" class="header-menu__link">
+          <!-- title attribute gets inherited from its parent -->
           <img
             src="./assets/images/ico-menu.svg"
-            alt="Hamburger menu of the page"
+            alt="Hamburger menu of the page with a blue background"
             class="header-menu__image"
           />
-          <!-- title attribute gets inherited from its container -->
         </a>
       </nav>
     </header>
@@ -34,23 +34,22 @@
         <div class="hero__wrapper">
           <h1 class="hero__title">
             <span class="hero__title--inner">Anonymous</span>
-            <span class="hero__title--inner">Proxy</span>
+            <span class="hero__title--inner">proxy</span>
           </h1>
           <p class="hero__subtitle">In hac habitasse platea dictumst.</p>
           <a href="#reasons" title="Go to section 3 reasons to purchase" class="hero-button">
             <img
               src="./assets/images/ico-scroll-down.svg"
-              alt="Flecha naranja señalando hacia abajo"
+              alt="Orange arrow pointing downwards"
               class="hero-button__image"
             />
           </a>
         </div>
       </section>
       <section class="tips">
-        <div class="wrapper">
-          <!-- do we need an article here? meh just 1 element-->
-          <p class="tips__tag">Insomnia Tips</p>
-          <h2 class="tips__title">Looking Through A Window</h2>
+        <div class="tips__wrapper">
+          <p class="tips__tag">Insomnia tips</p>
+          <h2 class="tips__title">Looking through a window</h2>
           <p class="tips__text">
             Donec accumsan, nulla ut volutpat porttitor, quam odio tempus felis,
             at luctus ex diam nec lectus. Vivamus semper sodales rutrum.
@@ -60,7 +59,7 @@
       </section>
       <section class="reasons" id="reasons">
         <div class="reasons__wrapper"> 
-          <h2 class="reasons__title">3 Reasons To Purchase</h2>
+          <h2 class="reasons__title">3 reasons to purchase</h2>
           <div class="grid-container">
             <article class="reasons-article">
               <h3 class="reasons-article__title">Ut sed metus</h3>
