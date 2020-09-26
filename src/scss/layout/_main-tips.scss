@@ -22,6 +22,7 @@
     color: $color-brand-light;
     font-size: 0.875rem;
     line-height: 2.14;
+    text-transform: capitalize;
     // use padding instead of margin in case we define another background-color 
     padding-top: 30px; 
 
@@ -39,6 +40,8 @@
     color: $color-dark;
     font-weight: bold;
     margin-bottom: 15px;
+    text-transform: capitalize;
+
   
     @media all and (min-width: 768px) {
       font-size:  1.625rem;

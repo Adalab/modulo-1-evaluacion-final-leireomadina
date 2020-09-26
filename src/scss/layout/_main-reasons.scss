@@ -27,6 +27,7 @@
     font-weight: bold;
     line-height: 1.25;
     color: $color-dark;
+    text-transform: capitalize;
   
     @media all and (min-width: 768px) {
       font-size: 1.625rem;
