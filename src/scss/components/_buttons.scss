@@ -1,20 +1,19 @@
 //** Global styles for the 4 page buttons
 
-// Hero main section button (inner navigation link):
+// Hero main section circular button (inner navigation link):
 .hero-button {
-  margin-bottom: 53px;
-  width: 45px;
-  height: 45px;
-  background-color: $color-light;
-  border-radius: 50%;
-  //mixin to center the image both horizontally and vertically with flex
+  //include mixin to define circular buttons with common styles
+  @include circularButton();
+  // include mixin to center the image both horizontally and vertically with flex
   @include flexCentered();
   // animation related styles
+  margin-bottom: 53px;
   animation-name: updown;
   animation-duration: 2s;
   animation-iteration-count: 4;
   animation-timing-function: ease;
-
+  
+  // Downwards arrow iamge:
   &__image {
     object-fit: contain;
   }
@@ -28,19 +27,14 @@
   }
 }
 
-//tips button
-
+// Tips main section button:
 .tips-button {
+ //include mixin to define rectangular rounded corner buttons with common styles:
+ @include rectangularButton();
   margin-bottom: 45px;
   width: 76px;
-  height: 45px;
-  border-radius: 22.5px;
   border: solid 2px $color-brand-cta;
   color: $color-brand-cta;
-  cursor: pointer;
-  font-size: 1.25rem;
-  line-height: 2.25;
-  font-weight: 500;
   background-color: $color-light;
   //transition styles related to hover effect
   transition: background-color ease-out 0.3s, color ease 0.3s;
@@ -62,19 +56,15 @@
 
 // Reasons main section button:
 .reasons-button {
+  //include mixin to define rectangular rounded corner buttons with common styles:
+  @include rectangularButton();
   width: 184px;
-  height: 45px;
-  border-radius: 22.5px;
   background-color: $color-brand-cta;
   border: 2px solid $color-brand-cta;
-  cursor: pointer;
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 2.25;
   color: $color-light;
   //transition styles related to hover effect
   transition: background-color ease-out 0.3s, color ease 0.3s,
-    border ease-out 0.3s, transform ease-out 0.3s, letter-spacing ease 0.5s;
+    border ease-out 0.3s;
 
   //hover effect for better UX
   &:hover {
@@ -92,26 +82,27 @@
   }
 }
 
-// Footer button (inner navigation link):
+// Footer circular button (inner navigation link):
 .footer-button {
-  width: 45px;
-  height: 45px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  background-color: $color-light;
-  border-radius: 50%;
-  //mixin to center the image both horizontally and vertically with flex
+  //include mixin to define circular buttons with common styles:
+  @include circularButton();
+  //include mixin to center the image both horizontally and vertically with flex
   @include flexCentered();
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  /* change position property to get the item out of the natural flow + add relative position to the footer block class to define a new coordinate system */
   position: absolute;
+  //move it upwards equally to half of the button's height
   top: calc(-45px / 2);
+  //move it to the right equally to half of the container's width minus half of the button's width
   left: calc(50% - (45px / 2));
-  // animation related styles
+  //animation related styles
   animation-name: breath;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
   animation-delay: 1s;
 
-  // Arrow image:
+  // Upwards arrow image:
   &__image {
     width: 20.6px;
     height: 24px;
