@@ -2,7 +2,7 @@
 
 // Footer block:
 .footer {
-  background-color: $color-brand-dark;
+  background-color: $color-brand-midtone;
   //creates a new coordinate system for the arrow footer button
   position: relative;
   
@@ -26,7 +26,7 @@
     text-align: center;
     @media all and (min-width: 768px) {
       //so that the copy can be at the left side
-      flex-direction: row-reverse;
+      flex-direction: row;
       justify-content: center;
       align-items: flex-start;
       text-align: left;
@@ -36,7 +36,7 @@
 
 // Menu block:
 .footer-menu {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   @media all and (min-width: 768px) {
     margin-bottom: 0;
     width: 210px;
@@ -46,16 +46,16 @@
   }
 
    // Social menu styles:
-   &--reordered {
-    @media all and (min-width: 768px) {
-      //moving the social menu to the center of the footer
-      order: -1; 
-    }
-  }
+  //  &--reordered {
+  //   @media all and (min-width: 768px) {
+  //     //moving the social menu to the center of the footer
+  //     // order: 0; 
+  //   }
+  // }
 
   // Link styles:
   &__link {
-    color: $color-light;
+    color: $color-dark;
     text-transform: uppercase;
     font-size: 1rem;
     //bigger clickable space for better UX
@@ -79,14 +79,20 @@
   // Copyright and claim text styles:
   &__inner {
     display: block;
-    color: $color-light;
+    color: $color-dark;
     line-height: 2.14;
     font-size: 0.875rem;
     text-transform: lowercase;
   
     // Heart emoji:
     &--highlighted {
-      color: #f26002;
+      color: $color-brand-cta;
+    }
+
+    &--highlighted-2 {
+      @media all and (min-width: 768px) {
+        color: $color-brand-cta;
+      }
     }
   }
 }
